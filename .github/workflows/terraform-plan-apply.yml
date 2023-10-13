@@ -24,7 +24,6 @@ jobs:
 
       - name: Terraform Plan
         run: terraform plan -out-tfplan.out
-
       - name: Save Plan Artifact
         uses: actions/upload-artifact@v2
         with:
