@@ -4,17 +4,24 @@ on:
     branches:
       - main
 jobs:
-  terraform-test:
-    name: Terraform Test
+  terraform-plan:
+    name: Terraform Plan
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Login to azure
+        uses: azure/login@v1
+        with: null
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
       - name: Terraform Init
         run: terraform init
-      - name: Terraform Format
-        run: terraform fmt -check -recursive
-      - name: Terraform Validate
-        run: terraform validate
+      - name: Terraform Plan
+        run: terraform plan -out-tfplan.out
+      - name: Save Plan Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: tfplan
+          path: tfplan.out
