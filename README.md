@@ -51,3 +51,5 @@ sql_administrator_password: This variable sets the password for the SQL Server a
 sql_database_name: This variable defines the name of the SQL Database that will be created. It's set to "sql-database."
 
 sql_server_name: This variable specifies the name of the Azure SQL Server. It's set to "sqlserver-azdb."
+
+firewall_rule_name: This variable defines the name of the Azure SQL Database firewall rule. It's set to "firewall-rule."
