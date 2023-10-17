@@ -43,3 +43,11 @@ resource_group_location: This variable defines the Azure region (location) where
 app_service_name: This variable represents the name of the Azure Web App service that will be created. It's set to "taskboard-service."
 
 app_service_plan_name: This variable specifies the name of the Azure App Service Plan that the web app will use. It's set to "taskboard-plan."
+
+sql_administrator_login_username: This variable sets the username for the SQL Server administrator.
+
+sql_administrator_password: This variable sets the password for the SQL Server administrator. It's important to use a strong, secure password.
+
+sql_database_name: This variable defines the name of the SQL Database that will be created. It's set to "sql-database."
+
+sql_server_name: This variable specifies the name of the Azure SQL Server. It's set to "sqlserver-azdb."
