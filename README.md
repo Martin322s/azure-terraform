@@ -39,3 +39,7 @@ provider "azurerm" {
 resource_group_name: This variable specifies the name of the Azure Resource Group where your Azure resources will be deployed. In this case, it's set to "taskboard-resource-group."
 
 resource_group_location: This variable defines the Azure region (location) where the resource group will be created. In this case, it's set to "westeurope."
+
+app_service_name: This variable represents the name of the Azure Web App service that will be created. It's set to "taskboard-service."
+
+app_service_plan_name: This variable specifies the name of the Azure App Service Plan that the web app will use. It's set to "taskboard-plan."
