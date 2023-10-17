@@ -53,3 +53,5 @@ sql_database_name: This variable defines the name of the SQL Database that will 
 sql_server_name: This variable specifies the name of the Azure SQL Server. It's set to "sqlserver-azdb."
 
 firewall_rule_name: This variable defines the name of the Azure SQL Database firewall rule. It's set to "firewall-rule."
+
+repo_URL: This variable holds the URL of the Git repository that will be connected to the Azure Web App for continuous deployment. In this case, it's set to 
